@@ -32,8 +32,8 @@ There have been made some attempts to increase the privacy of visitors:
 * Be aware that embedding widgets (G+, Twitter, Gist) will reveal information about your visitors to these services.
 
 The template is somehow prepared for hosting on github, that's why the errorpage
-will be named `404.html` and a `CNAME` file will be put in your document root with
-your hostname. If you don't have a custom domain, you may remove this file.
+will be named `404.html`. If you have a custom domain, you may want to add a `CNAME`
+file to the `source` directory.
 
 ## Checklist
 
@@ -41,7 +41,7 @@ your hostname. If you don't have a custom domain, you may remove this file.
 * check `data/site.yml`
 * check `config.rb`
 * check updates of javascript lists: `bower install`, `bower update`
-* decide, if you want to keep the `CNAME` file (meant for github users)
+* decide, if you want to add a `CNAME` file if you use github
 * if you want to use more than one language, consider which naming scheme you want to use:
   If you tweak it the right way, you can use Apaches content-negotiation feature to direct
   your visitors directly to the appropiate landing page using their browser language settings.
