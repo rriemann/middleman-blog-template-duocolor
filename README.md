@@ -6,6 +6,10 @@ and its [blog extension](http://middlemanapp.com/basics/blogging/).
 It features a responsive HTML5 CSS3 based design based on [Bootstrap](http://getbootstrap.com/)
 which makes it easy to modify.
 
+## Live Demo
+
+* <http://rriemann.github.io/middleman-blog-template-duocolor/>
+
 ## Features
 
 This template incorporates a lot of features:
