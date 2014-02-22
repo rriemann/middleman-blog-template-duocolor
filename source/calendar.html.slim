@@ -1,0 +1,30 @@
+---
+pageable: false
+per_page: 12
+---
+- content_for(:sidebar)
+  == partial "aside/recent-posts"
+  == partial "aside/recent-comments"
+
+
+section.archive
+  h1
+    ==> I18n.t :posts_from
+    - case page_type
+    - when 'day'
+      = I18n.l Date.new(year, month, day), format: :long
+    - when 'month'
+      = Date.new(year, month).strftime('%B %Y')
+    - when 'year'
+      = year
+      
+  == partial "article-listing", locals: {articles: page_articles}
+  
+  - if paginate && num_pages > 1
+    p
+      | Page #{page_number} of #{num_pages}
+    - if prev_page
+      p= link_to I18n.t(:previous), prev_page
+  - if paginate
+    - if next_page
+      p= link_to I18n.t(:next), next_page

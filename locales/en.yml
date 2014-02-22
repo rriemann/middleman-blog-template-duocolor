@@ -1,0 +1,33 @@
+---
+en:
+  subtitle: .english
+  # menu
+  about_me: About Me
+  archive:  Archive
+  files:    Files
+  # misc
+  read_more: Read More
+  previous:  Previous
+  next:      Next
+  posts_from: Posts from
+  posts_tagged: Posts tagged
+  built: "version %{hash} on"
+  choose_language: Language
+  
+  # partial: _site-search
+  sitesearch: Site Search
+  sitesearch_by: by
+  sitesearch_placeholder: Search this site
+  
+  # partial: _recent-posts
+  recent_posts: Recent Posts
+  
+  # partial: _recent-tweets
+  recent_tweets: Recent Tweets
+  
+  # partial: _recent-comments
+  recent_comments: Recent Comments
+  
+  # partial: _affiliated-with
+  affiliated_with: Affiliated With
+  

@@ -1,0 +1,19 @@
+.post-header
+  h1
+    / span.glyphicon.glyphicon-calendar
+    a href="#{article.url}"
+      = article.title
+  ul.tagline
+    li
+      / span.glyphicon.glyphicon-time
+      span.glyphicon.glyphicon-pencil
+      time datetime="#{article.date.strftime('%Y-%m-%d')}"
+        =<> I18n.l article.date.to_date, format: :long
+    li.comment
+      span.glyphicon.glyphicon-comment>
+      / the following url has to match the disqus url
+      = link_to 'Comments', "//#{data.site.host}#{article.url}#disqus_thread"
+    - article.tags.each do |tag|
+      li
+        span.glyphicon.glyphicon-tag>
+        = link_to tag, "/tags/#{tag}.html"

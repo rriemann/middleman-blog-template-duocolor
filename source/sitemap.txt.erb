@@ -1,0 +1,7 @@
+---
+layout: false
+---
+<% root_url = "http://" + data.site.host %>
+<% sitemap.resources.each do |page| %>
+<%= "#{root_url}#{page.url}\n" if page.path =~ /\.(xml|html|txt)$/ %>
+<% end %>

@@ -1,0 +1,31 @@
+- content_for(:sidebar)
+  == partial "aside/recent-posts"
+  == partial "aside/recent-comments"
+
+- wrap_layout :layout do
+  section
+    == partial "article-header", locals: {article: current_article}
+    == yield
+    /
+      a.btn.btn-primary href="#"
+        == I18n.t :read_more
+        span.glyphicon.glyphicon-chevron-right
+    .clearfix
+    hr.hidden-print
+    ul.pager.hidden-print
+      - if current_page.next_article
+        li.previous
+          a title="#{current_page.next_article.title}" href="#{current_page.next_article.url}" &larr; #{I18n.t :previous}
+      - else
+        li.previous.disabled
+          span &larr; #{I18n.t :previous}
+      - if current_page.previous_article
+        li.next
+          a title="#{current_page.previous_article.title}" href="#{current_page.previous_article.url}" #{I18n.t :next} &rarr;
+      - else
+        li.next.disabled
+          span #{I18n.t :next} &rarr;
+    hr
+    #disqus_thread
+    == partial :disqus
+ 

@@ -1,0 +1,120 @@
+/ idea: http://binary-btemplates.blogspot.fr/
+doctype html
+== "\n"
+/[if lt IE 7]
+  | <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="#{I18n.locale}">
+== "\n"
+/[if IE 7]
+  | <html class="no-js lt-ie9 lt-ie8" lang="#{I18n.locale}">
+== "\n"
+/[if IE 8]
+  | <html class="no-js lt-ie9" lang="#{I18n.locale}">
+== "\n"
+| <!--[if gt IE 8]<!-->
+html.no-js lang=(I18n.locale)
+  | <!--<![endif]-->
+  == "\n"
+  head
+    meta charset="UTF-8"
+    == "\n"
+    == "\n"
+    - content_for(:title, current_page.data.title)
+    title= yield_content(:title).blank? ? data.site.title : yield_content(:title) + " - " + data.site.title
+    == "\n"
+    == "\n"
+    meta name="description" content="#{yield_content(:description).blank? ? data.site.description : yield_content(:description)}"
+    meta name="keywords" content="#{yield_content(:keywords).blank? ? data.site.keywords.join(', ') : yield_content(:keywords).join(', ')}"
+    meta name="author" content="#{data.site.author}"
+    link type="text/plain" rel="author" href="/humans.txt"
+    == "\n"
+    == "\n"
+    link href="/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml"
+    == yield_content(:header)
+    == "\n"
+    == "\n"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+    meta http-equiv="cleartype" content="on"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="apple-mobile-web-app-capable" content="yes"
+    meta name="apple-mobile-web-app-status-bar-style" content="black"
+    / link rel="apple-touch-startup-image" href="images/splash.png"
+    == "\n"
+    == "\n"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png"
+    link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"
+    == "\n"
+    == "\n"
+    link rel="icon"    type="image/ico" sizes="16x16" href="/favicon.ico"
+    link rel="shortcut icon" type="image/png" href="/favicon.png"
+    == "\n"
+    == "\n"
+    == stylesheet_link_tag 'application'
+    == stylesheet_link_tag '//fonts.googleapis.com/css?family=Droid+Sans|Droid+Serif:400,700,700italic|Droid+Sans+Mono'
+    == "\n"
+    == javascript_include_tag 'application'
+    == "\n"
+  == "\n"
+  / body
+  body class=(page_classes.split[0..2].map{|page| "site_#{page}"})
+    .container
+      .row
+        .col-md-9#wrapper-content
+          .hidden-xs#headline: h1
+            a> href="#{site_url}/" = I18n.t :title, default: data.site.title
+            small == I18n.t :subtitle, default: data.site.subtitle
+          nav.navbar.navbar-default role="navigation"
+            .navbar-header
+              button.navbar-toggle data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              a.navbar-brand.visible-xs> href="#{site_url}/" = data.site.title
+                small nothing else
+            .collapse.navbar-collapse.navbar-ex1-collapse
+              ul.nav.navbar-nav
+                li
+                  = link_to 'Readme', "#{site_url}/"
+                li
+                  = link_to 'Blog', "#{site_url}/blog.html"
+                li
+                  = link_to 'Archives', "#{site_url}/archives.html"
+                li.dropdown
+                  a.dropdown-toggle data-toggle="dropdown" href="#"
+                    ==> I18n.t :choose_language
+                    span.caret
+                  ul.dropdown-menu
+                    li
+                      = link_to 'english', "#{site_url}/language.html"
+                    li
+                      = link_to 'deutsch', "#{site_url}/de/language.html"
+                    li
+                      = link_to 'français', "#{site_url}/fr/language.html"
+                li
+                  a href='https://github.com' Code
+                li
+                  = link_to 'Demonstration', "#{site_url}/demo.html"
+                li
+                  = link_to I18n.t(:about_me), "#{site_url}/about.html"
+                    
+          div#content
+            == yield
+        
+        .col-md-3.hidden-print#wrapper-sidebar
+          .row
+            == partial "aside/site-search"
+            == yield_content(:sidebar)
+
+      .row
+        .col-md-9#wrapper-footer
+          footer.text-center: small
+            ' Copyright &copy; #{Time.now.year} #{data.site.author} |
+            / ' Powered by #{link_to 'Middleman', '//middlemanapp.com'} |
+            / ' Hosted by #{link_to 'Github', '//github.com'} |
+            ==> I18n.t :built,  hash: %x{git describe --always}
+            time datetime="#{File.mtime(current_page.source_file).strftime('%Y-%m-%d')}"
+              == I18n.l File.mtime(current_page.source_file), format: :long
+    == partial :analytics

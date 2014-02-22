@@ -1,0 +1,17 @@
+{
+  "name": "middleman-blog-template",
+  "version": "0.0.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0",
+    "modernizr": "~2.6.2"
+  }
+}

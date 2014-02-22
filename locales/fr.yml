@@ -1,0 +1,32 @@
+---
+fr:
+  subtitle: .français
+  # menu
+  about_me: Sur Moi
+  archive:  Archives
+  files:    Fichiers
+  # misc
+  read_more: Continuer
+  previous:  Précédent
+  next:      Suivant
+  posts_from: Posts du
+  posts_tagged: Posts dans
+  built: "version %{hash} du"
+  choose_language: Langue
+  
+  # partial: _site-search
+  sitesearch: Rechercher
+  sitesearch_by: via
+  sitesearch_placeholder: Rechercher sur ce site
+ 
+  # partial: _recent-posts
+  recent_posts: Posts récents
+  
+  # partial: _recent-tweets
+  recent_tweets: Tweets récents
+  
+  # partial: _recent-comments
+  recent_comments: Commentaire récents
+  
+  # partial: _affiliated-with
+  affiliated_with: Affilier à

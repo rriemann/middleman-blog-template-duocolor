@@ -1,0 +1,8 @@
+aside.col-md-12.col-sm-6#recent-posts
+  section
+    header: h4== I18n.t :recent_posts
+    div
+      ul.list-unstyled
+        - blog.articles[0...10].each do |article|
+          li
+            = link_to article.title, article

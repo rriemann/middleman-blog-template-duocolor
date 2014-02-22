@@ -1,0 +1,17 @@
+---
+directory_index: false
+layout: page
+---
+- content_for(:sidebar) do
+  == partial("aside/recent-posts")
+  / == partial("aside/recent-tweets")
+  / == partial("aside/affiliated-with")
+
+div.row
+  .col-lg-3.col-md-4.col-sm-4.col-xs-6
+    .well.text-center: h1
+      div 404
+      small Not Found
+    =  link_to 'Get me out of here!', '/', role: 'button', class: "btn btn-primary btn-block"
+  .col-lg-9.col-md-8.col-sm-8.col-xs-6
+    == image_tag lorem.image('640x420', :text => 'funny picture'), style: 'width: 100%'

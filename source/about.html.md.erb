@@ -1,0 +1,23 @@
+---
+title: About Me
+layout: page
+---
+<%
+  content_for(:sidebar) do
+    [
+      # partial("aside/recent-posts"), 
+      partial("aside/recent-tweets"),
+      # partial("aside/blog-roll"), 
+      partial("aside/affiliated-with"), 
+    ].join
+  end
+%>
+
+<%= image_tag lorem.image('217x300', :text => "photo"), title: "That's me." %>
+{:.pull-right}
+
+# About
+
+> *personal slogan*
+
+<%= lorem.paragraphs 4 %>

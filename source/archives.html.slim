@@ -1,0 +1,12 @@
+---
+pageable: false
+per_page: 12
+---
+- content_for(:sidebar)
+  == partial "aside/recent-posts"
+  == partial "aside/recent-comments"
+
+section.archive
+  .tag-header
+    h1 Blog #{I18n.t :archive}
+  == partial "article-listing", locals: {articles: blog.articles}

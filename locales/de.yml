@@ -1,0 +1,32 @@
+---
+de:
+  subtitle: .deutsch
+  # menu
+  about_me: Über Mich
+  archive:  Archiv
+  files:    Dateien
+  # misc
+  read_more: Weiterlesen
+  previous:  Zurück
+  next:      Weiter
+  posts_from: Posts vom
+  posts_tagged: Posts markiert mit
+  built: "Version %{hash} vom"
+  choose_language: Sprache
+  
+  # partial: _site-search
+  sitesearch: Suche
+  sitesearch_by: mit
+  sitesearch_placeholder: Suche in dieser Website
+  
+  # partial: _recent-posts
+  recent_posts: Letzte Posts
+  
+  # partial: _recent-tweets
+  recent_tweets: Letzte Tweets
+  
+  # partial: _recent-comments
+  recent_comments: Letzte Kommentare
+  
+  # partial: _affiliated-with
+  affiliated_with: Unterstützer von

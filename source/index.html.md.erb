@@ -1,0 +1,20 @@
+---
+title:
+layout: page
+---
+<%
+  content_for(:sidebar) do
+    [
+      # partial("aside/recent-posts"), 
+      partial("aside/recent-tweets"),
+      partial("aside/blog-roll"), 
+      partial("aside/affiliated-with"), 
+    ].join
+  end
+%>
+
+* list element with functor item
+{:toc}
+
+<%= File.read('README.md') %>
+

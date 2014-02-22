@@ -1,0 +1,193 @@
+---
+title: Latex Test
+layout: page
+---
+
+- content_for(:sidebar) do
+      == partial("aside/recent-tweets")
+      == partial("aside/affiliated-with")
+
+- content_for(:header) do
+      script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+
+markdown:
+  ## Latex Test
+
+  $$
+  \begin{align*}
+    & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+    = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+    & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+        \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+        \vdots & \ddots & \vdots \\
+        \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+      \end{array} \right)
+    \left( \begin{array}{c}
+        y_1 \\
+        \vdots \\
+        y_n
+      \end{array} \right)
+  \end{align*}
+  $$
+
+  ### Code in Markdown Environment
+
+  ~~~latex
+  $$
+  \begin{align*}
+    & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
+    = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
+    & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
+        \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
+        \vdots & \ddots & \vdots \\
+        \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
+      \end{array} \right)
+    \left( \begin{array}{c}
+        y_1 \\
+        \vdots \\
+        y_n
+      \end{array} \right)
+  \end{align*}
+  $$
+  ~~~
+
+  ### Includes
+
+  ~~~html
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  ~~~
+
+  ### References
+
+  * <http://kramdown.gettalong.org/syntax.html#math-blocks>
+
+  ## Gist-Include Test
+
+
+  Here the comparison
+
+  ~~~shell
+  #!/usr/bin/env sh
+
+  rm out*.jpg
+  rm out*.gif
+  ffmpeg -y -i 13040065.mp4 -t 1 -filter:v transpose=1,scale=400:-1,deshake,crop=400:400 out%02d.jpg
+
+  for file in *.jpg; do
+    convert $file ${file%.*}.gif
+  done
+  gifsicle --delay=5 --colors 256 --loop out*.gif > final.gif
+  convert final.gif -layers Optimize final.gif
+
+  rm out*.jpg
+  rm out*.gif
+  ~~~
+  github-like *description*
+  {: .code-meta}
+
+  <script src="https://gist.github.com/rriemann/5404791.js"></script>
+
+h2 fontello
+
+#icons.container
+  .row
+    .the-icons.span3 title="Code: 0xe803"
+      i.icon-cc
+      span.i-name icon-cc
+      span.i-code 0xe803
+    .the-icons.span3 title="Code: 0xe816"
+      i.icon-lastfm-circled
+      span.i-name icon-lastfm-circled
+      span.i-code 0xe816
+    .the-icons.span3 title="Code: 0xe805"
+      i.icon-cc-nc
+      span.i-name icon-cc-nc
+      span.i-code 0xe805
+    .the-icons.span3 title="Code: 0xe806"
+      i.icon-cc-nc-eu
+      span.i-name icon-cc-nc-eu
+      span.i-code 0xe806
+  .row
+    .the-icons.span3 title="Code: 0xe807"
+      i.icon-cc-nc-jp
+      span.i-name icon-cc-nc-jp
+      span.i-code 0xe807
+    .the-icons.span3 title="Code: 0xe808"
+      i.icon-cc-sa
+      span.i-name icon-cc-sa
+      span.i-code 0xe808
+    .the-icons.span3 title="Code: 0xe809"
+      i.icon-cc-nd
+      span.i-name icon-cc-nd
+      span.i-code 0xe809
+    .the-icons.span3 title="Code: 0xe80a"
+      i.icon-cc-pd
+      span.i-name icon-cc-pd
+      span.i-code 0xe80a
+  .row
+    .the-icons.span3 title="Code: 0xe80b"
+      i.icon-cc-zero
+      span.i-name icon-cc-zero
+      span.i-code 0xe80b
+    .the-icons.span3 title="Code: 0xe80c"
+      i.icon-cc-share
+      span.i-name icon-cc-share
+      span.i-code 0xe80c
+    .the-icons.span3 title="Code: 0xe80d"
+      i.icon-cc-remix
+      span.i-name icon-cc-remix
+      span.i-code 0xe80d
+    .the-icons.span3 title="Code: 0xe804"
+      i.icon-cc-by
+      span.i-name icon-cc-by
+      span.i-code 0xe804
+  .row
+    .the-icons.span3 title="Code: 0xe80f"
+      i.icon-github-circled
+      span.i-name icon-github-circled
+      span.i-code 0xe80f
+    .the-icons.span3 title="Code: 0xe801"
+      i.icon-flickr
+      span.i-name icon-flickr
+      span.i-code 0xe801
+    .the-icons.span3 title="Code: 0xe80e"
+      i.icon-flickr-circled
+      span.i-name icon-flickr-circled
+      span.i-code 0xe80e
+    .the-icons.span3 title="Code: 0xe802"
+      i.icon-twitter
+      span.i-name icon-twitter
+      span.i-code 0xe802
+  .row
+    .the-icons.span3 title="Code: 0xe810"
+      i.icon-twitter-circled
+      span.i-name icon-twitter-circled
+      span.i-code 0xe810
+    .the-icons.span3 title="Code: 0xe811"
+      i.icon-facebook
+      span.i-name icon-facebook
+      span.i-code 0xe811
+    .the-icons.span3 title="Code: 0xe812"
+      i.icon-facebook-squared
+      span.i-name icon-facebook-squared
+      span.i-code 0xe812
+    .the-icons.span3 title="Code: 0xe813"
+      i.icon-gplus
+      span.i-name icon-gplus
+      span.i-code 0xe813
+  .row
+    .the-icons.span3 title="Code: 0xe814"
+      i.icon-tumblr-circled
+      span.i-name icon-tumblr-circled
+      span.i-code 0xe814
+    .the-icons.span3 title="Code: 0xe815"
+      i.icon-lastfm
+      span.i-name icon-lastfm
+      span.i-code 0xe815
+    .the-icons.span3 title="Code: 0xe800"
+      i.icon-github
+      span.i-name icon-github
+      span.i-code 0xe800
+div
+  ' Generated by
+  a href="http://fontello.com" http://fontello.com

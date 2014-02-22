@@ -1,0 +1,25 @@
+---
+pageable: false
+per_page: 12
+---
+- content_for(:sidebar)
+  == partial "aside/recent-posts"
+  == partial "aside/recent-comments"
+- content_for(:header)
+  link href="#{current_page.url}atom.xml" rel="alternate" title="Worth Mentioning - #{tagname}" type="application/atom+xml"
+
+section.archive: .tag-header
+  h1
+    ==> I18n.t :posts_tagged
+    em= tagname
+
+  == partial "article-listing", locals: {articles: page_articles}
+  
+  - if paginate && num_pages > 1
+    p
+      | Page #{page_number} of #{num_pages}
+    - if prev_page
+      p= link_to I18n.t(:previous), prev_page
+  - if paginate
+    - if next_page
+      p= link_to I18n.t(:next), next_page

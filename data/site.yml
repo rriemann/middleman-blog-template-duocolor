@@ -1,0 +1,15 @@
+lang: en
+title: Middleman Template Duo Color
+subtitle: subtitle default
+description: my nice description
+keywords:
+  - keywords
+  - what ever
+author: Martin Mustermann
+email:  me@localhost.local
+twitter: middleman
+location: Germany, Berlin
+
+google_analytics_id: UA-00000000-0
+  
+host: blog.riemann.cc

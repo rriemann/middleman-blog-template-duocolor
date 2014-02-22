@@ -1,0 +1,43 @@
+---
+title: Home
+pageable: true
+per_page: 10
+priority: 1.0
+changefreq: daily
+---
+- content_for(:sidebar)
+  == partial "aside/recent-tweets"
+  == partial "aside/recent-posts"
+  == partial "aside/recent-comments"
+section.blog-index
+  - page_articles.each do |article|
+    == partial "article-header", locals: {article: article}
+    == article.summary
+    .clearfix
+    a.btn.btn-primary href="#{article.url}"
+      == I18n.t :read_more
+      span.glyphicon.glyphicon-chevron-right
+    hr
+  - if paginate && num_pages > 1
+    ul.pager
+      - if prev_page
+        li.previous
+          / a title="#{current_page.previous_article.title}" href="#{current_page.previous_article.url}" &larr; #{I18n.t :previous}
+          = link_to "&larr; #{I18n.t :previous}", prev_page
+      - else
+        li.previous.disabled
+          span &larr; #{I18n.t :previous}
+      - if next_page
+        li.next
+          / a title="#{current_page.next_article.title}" href="#{current_page.next_article.url}" #{I18n.t :next} &rarr;
+          = link_to "#{I18n.t :next} &rarr;", next_page
+      - else
+        li.next.disabled
+          span #{I18n.t :next} &rarr;
+    / p
+      | Page
+      =<> page_number
+      ' of
+      = num_pages
+
+== partial :disqus

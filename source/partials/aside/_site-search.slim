@@ -1,0 +1,40 @@
+- if current_page.path != 'files.template'
+  aside.col-md-12.col-sm-6
+    section
+      header: h4
+        ==> I18n.t :sitesearch
+        small
+          ==> I18n.t :sitesearch_by
+          a href="https://duckduckgo.com/about" DuckDuckGo
+      div
+        form method="get" action="https://duckduckgo.com/"
+          .input-group
+            / https://duckduckgo.com/params
+            / input type="hidden" name="ie" value="utf-8"
+            / input type="hidden" name="k1" value="-1"
+            / erklärung
+            input type="hidden" name="ki" value="-1"
+            / feedback
+            input type="hidden" name="ke" value="-1"
+            / null-clicks box
+            input type="hidden" name="kz" value="-1"            
+            / hintergrund
+            / input type="hidden" name="k7" value="#EBE8DB"
+            / accent color (bar)
+            input type="hidden" name="kj" value="#CB4D51"
+            / link color
+            input type="hidden" name="k9" value="#CB4D51"
+            / text color
+            input type="hidden" name="k8" value="#000000"
+            / enable https
+            input type="hidden" name="kh" value="+1"
+            / kopfzeile scrollend
+            / input type="hidden" name="ko" value="s"
+            / sidebar (still on to comply with policies)
+            / input type="hidden" name="k4" value="-1"  
+            / site
+            input type="hidden" name="sites" value=(data.site.host)
+            input.form-control type="text" placeholder=(I18n.t :sitesearch_placeholder) name="q"
+            span.input-group-btn
+              button.btn.btn-default type="submit"
+                span.glyphicon.glyphicon-search

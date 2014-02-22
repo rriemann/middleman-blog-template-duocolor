@@ -1,0 +1,26 @@
+$brand-secondary:   #ebe8db;
+$brand-primary:     #4D7599; // blue
+$brand-primary:     #6F5739; // brown
+$brand-primary:     #4A572E; // dark olive green (check link color)
+$brand-primary:     #4A831B; // gras green
+$brand-primary:     #2F766E; // green teal
+$brand-primary:     #115D78; // dark cyan
+$body-bg:           $brand-primary;
+
+// http://css-tricks.com/snippets/css/font-stacks/
+$font-family-sans-serif: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+$font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace; // like Github Gist
+$font-github: "Helvetica Neue",Helvetica,arial,freesans,clean,sans-serif; // used for subline of highlighted code
+
+@import url(http://fonts.googleapis.com/css?family=Bitter:400);
+$headings-font-family: 'Bitter', $font-family-sans-serif;
+$headings-font-weight: 400;
+
+$border-radius-base: 0;
+$navbar-default-bg: #fff;
+$navbar-default-brand-color: #000;
+$thumbnail-bg: #fff;
+
+$site-url: "<%= site_url %>";
+// fix path for glyphicon fonts which come along with bootstrap
+$icon-font-path: "<%= settings.http_prefix + settings.fonts_dir %>/bootstrap/";
