@@ -60,9 +60,9 @@ your hostname. If you don't have a custom domain, you may remove this file.
  
 ## Issues and Comments
 
-If you find a bug, please issue a bug report right at the Github project. Patches
-are most welcome by push requests, but I don't mind emails as well. You find my
-contact details in the section below.
+If you find a bug, please [issue a bug report](https://github.com/rriemann/middleman-blog-template-duocolor/issues)
+right at the Github project. Patches are most welcome by push requests, but I
+don't mind emails as well. You find my contact details in the section below.
 
 
 ## Author

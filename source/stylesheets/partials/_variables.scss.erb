@@ -21,6 +21,6 @@ $navbar-default-bg: #fff;
 $navbar-default-brand-color: #000;
 $thumbnail-bg: #fff;
 
-$site-url: "<%= site_url %>";
+$site-url: "<%= site_url + settings.http_prefix %>";
 // fix path for glyphicon fonts which come along with bootstrap
 $icon-font-path: "<%= settings.http_prefix + settings.fonts_dir %>/bootstrap/";

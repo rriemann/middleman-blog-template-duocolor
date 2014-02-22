@@ -50,14 +50,34 @@ end
 activate :i18n, :mount_at_root => :en
 
 ###
+# Helpers
+###
+
+# Automatic image dimensions on image_tag helper
+# activate :automatic_image_sizes
+
+# Reload the browser automatically whenever files change
+# activate :livereload
+
+# Methods defined in the helpers block are available in templates
+# helpers do
+#   def some_helper
+#     "Helping"
+#   end
+# end
+
+helpers do
+  def site_url
+    '//' + settings.host
+  end
+end
+
+###
 # General settings
 ###
 
 # Syntax Highlighting
 activate :syntax, line_numbers: true
-
-activate :relative_assets
-set :relative_links, true
 
 # Assets PATH
 set :css_dir,      'stylesheets'
@@ -78,10 +98,47 @@ set :trailing_slash, true
 set :markdown_engine, :kramdown # now default
 set :markdown, :parse_block_html => true
 
-helpers do
-  def site_url
-    '//' + settings.host + '/middleman-blog-template-duocolor'
-  end
+# Slim configuration
+set :slim, {
+  :format  => :html5,
+  :indent => '    ',
+  :pretty => true,
+  :sort_attrs => false
+}
+::Slim::Engine.set_default_options lang: I18n.locale, locals: {}
+
+configure :development do
+  set :disqus, 'middleman-due-color-testing'
+  set :host, 'localhost:4567'
+end
+
+# Build-specific configuration
+configure :build do
+  set :disqus, 'middleman-due-color'
+  set :host,   'rriemann.github.io'
+
+  # Enable cache buster
+  # activate :asset_hash
+  
+  # Make favicons
+  # use: https://github.com/follmann/middleman-favicon-maker
+  activate :favicon_maker
+
+  # Minify
+  # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#compressing-images
+  activate :minify_css
+  activate :minify_javascript
+
+  # Enable cache buster
+  # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/improving-cacheability.html.markdown#cache-buster-in-query-string
+  activate :cache_buster
+
+  # Use relative URLs
+  # activate :relative_assets
+  # set :relative_links, true
+
+  # Or use a different image path
+  set :http_prefix, '/middleman-blog-template-duocolor/'
 end
 
 activate :deploy do |deploy|
@@ -90,15 +147,4 @@ activate :deploy do |deploy|
   # deploy.remote   = "custom-remote" # remote name or git url, default: origin
   # deploy.branch   = "custom-branch" # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-end
-
-configure :development do
-  set :disqus, 'testing'
-  set :host, 'localhost:4567'
-end
-
-# Build-specific configuration
-configure :build do
-  set :disqus, 'production'
-  set :host,   'rriemann.github.io'
 end

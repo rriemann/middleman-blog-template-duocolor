@@ -25,10 +25,10 @@ html.no-js lang=(I18n.locale)
     meta name="description" content="#{yield_content(:description).blank? ? data.site.description : yield_content(:description)}"
     meta name="keywords" content="#{yield_content(:keywords).blank? ? data.site.keywords.join(', ') : yield_content(:keywords).join(', ')}"
     meta name="author" content="#{data.site.author}"
-    link type="text/plain" rel="author" href="/humans.txt"
+    link type="text/plain" rel="author" href="#{settings.http_prefix}humans.txt"
     == "\n"
     == "\n"
-    link href="/atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml"
+    link href="#{settings.http_prefix}atom.xml" rel="alternate" title="Worth Mentioning" type="application/atom+xml"
     == yield_content(:header)
     == "\n"
     == "\n"
@@ -40,15 +40,15 @@ html.no-js lang=(I18n.locale)
     / link rel="apple-touch-startup-image" href="images/splash.png"
     == "\n"
     == "\n"
-    link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="/apple-touch-icon-57x57-precomposed.png"
-    link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png"
-    link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png"
-    link rel="apple-touch-icon-precomposed" type="image/png" href="/apple-touch-icon-precomposed.png"
-    link rel="apple-touch-icon" type="image/png" href="/apple-touch-icon.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="57x57" href="#{settings.http_prefix}apple-touch-icon-57x57-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="72x72" href="#{settings.http_prefix}apple-touch-icon-72x72-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" sizes="114x114" href="#{settings.http_prefix}apple-touch-icon-114x114-precomposed.png"
+    link rel="apple-touch-icon-precomposed" type="image/png" href="#{settings.http_prefix}apple-touch-icon-precomposed.png"
+    link rel="apple-touch-icon" type="image/png" href="#{settings.http_prefix}apple-touch-icon.png"
     == "\n"
     == "\n"
-    link rel="icon"    type="image/ico" sizes="16x16" href="/favicon.ico"
-    link rel="shortcut icon" type="image/png" href="/favicon.png"
+    link rel="icon" type="image/ico" sizes="16x16" href="#{settings.http_prefix}favicon.ico"
+    link rel="shortcut icon" type="image/png" href="#{settings.http_prefix}favicon.png"
     == "\n"
     == "\n"
     == stylesheet_link_tag 'application'
@@ -77,7 +77,7 @@ html.no-js lang=(I18n.locale)
             .collapse.navbar-collapse.navbar-ex1-collapse
               ul.nav.navbar-nav
                 li
-                  = link_to 'Readme', "#{site_url}/"
+                  = link_to 'Readme', "#{site_url}/index.html"
                 li
                   = link_to 'Blog', "#{site_url}/blog.html"
                 li
@@ -94,7 +94,7 @@ html.no-js lang=(I18n.locale)
                     li
                       = link_to 'français', "#{site_url}/fr/language.html"
                 li
-                  a href='https://github.com' Code
+                  a href='https://github.com/rriemann/middleman-blog-template-duocolor' Code
                 li
                   = link_to 'Demonstration', "#{site_url}/demo.html"
                 li

@@ -6,7 +6,7 @@ html {
 body {
   -webkit-text-size-adjust: none;
   // background: #333 url("/images/100-90-5-monochrome.png") 0 0 repeat;
-  @include background(image-url('#{$site-url}/images/100-40-10-monochrome.png'), linear-gradient(left, color-stops($brand-primary, $brand-primary 50%, $brand-secondary 50%)));
+  @include background(image-url('#{$site-url}images/100-40-10-monochrome.png'), linear-gradient(left, color-stops($brand-primary, $brand-primary 50%, $brand-secondary 50%)));
 }
 
 body * {
@@ -241,11 +241,11 @@ aside {
     margin-bottom: 0;
   }
   #wrapper-sidebar {
-    @include background(image-url('#{$site-url}/images/100-40-10-monochrome.png'), $brand-secondary);
+    @include background(image-url('#{$site-url}images/100-40-10-monochrome.png'), $brand-secondary);
   }
 
   #wrapper-content, #wrapper-footer {
-    @include background(image-url('#{$site-url}/images/100-40-10-monochrome.png'), $brand-primary);
+    @include background(image-url('#{$site-url}images/100-40-10-monochrome.png'), $brand-primary);
   }
 
   #wrapper-sidebar aside {
@@ -303,7 +303,7 @@ aside {
 }
 
 // aside styles
-#recent-comments .dsq-widget, #recent-posts, aside#recent-webcomics {
+#recent-comments .dsq-widget, #recent-posts, aside#recent-webcomics, aside#blog-roll {
   ul {
     @include separated-list();
     margin: 0;
