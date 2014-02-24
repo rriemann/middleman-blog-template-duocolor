@@ -93,13 +93,8 @@ This template was originally developed for my personal blog <http://blog.riemann
 
 Template Duo Color (c) 2014 by Robert Riemann <robert@riemann.cc>
 
-Except where otherwise noted, Template Duo Color is licensed under a
-Creative Commons Attribution 4.0 International License.
+Except where otherwise noted, Template Duo Color is licensed under the
+MIT license.
 
 You should have received a copy of the license along with this
-work. If not, see <http://creativecommons.org/licenses/by/4.0/>.
-
-[![Creative Commons License][cc-image]][cc]
-
-[cc-image]:  https://i.creativecommons.org/l/by/4.0/88x31.png
-[cc]: https://creativecommons.org/licenses/by/4.0/ "Creative Commons Attribution 4.0 International license"
+work. If not, see <http://opensource.org/licenses/MIT>
