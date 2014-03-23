@@ -147,8 +147,10 @@ body * {
   .footnotes {
     clear: both;
   }
-  .thumbnail iframe, .thumbnail img { // fix youtube embed and flickr
-    max-width: 100%;
+  .thumbnail {
+    &, iframe, img { // fix youtube embed and flickr
+      max-width: 100%;
+    }
   }
   #disqus-thread {
     font-family: $font-github !important;
