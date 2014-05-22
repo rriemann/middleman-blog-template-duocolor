@@ -22,8 +22,8 @@ html.no-js lang=(I18n.locale)
     title= yield_content(:title).blank? ? data.site.title : yield_content(:title) + " - " + data.site.title
     == "\n"
     == "\n"
-    meta name="description" content="#{yield_content(:description).blank? ? data.site.description : yield_content(:description)}"
-    meta name="keywords" content="#{yield_content(:keywords).blank? ? data.site.keywords.join(', ') : yield_content(:keywords).join(', ')}"
+    meta name="description" content="#{current_page.data.description.blank? ? I18n.t(:description, default: data.site.description) : current_page.data.description.chomp}"
+    meta name="keywords" content="#{current_page.data.keywords.nil? ? I18n.t(:keywords, default: data.site.keywords) : current_page.data.keywords.join(', ')}"
     meta name="author" content="#{data.site.author}"
     link type="text/plain" rel="author" href="#{settings.http_prefix}humans.txt"
     == "\n"
