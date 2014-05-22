@@ -54,6 +54,7 @@ file to the `source` directory.
 * The duckduckgo results page is customized by some post variables next to the
   search string. Have a look in `_site-search.slim` to make it fit your needs
 * add the missing lines to ease your deployment: `middleman-deploy`
+* comment in one of the tracking snippets if you want to use Google or Piwik Analytics
 
 
 

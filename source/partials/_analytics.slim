@@ -1,4 +1,5 @@
-javascript:
+/! Google Analtyics
+/ javascript:
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '#{data.site.google_analytics_id}']);
   _gaq.push(['_gat._anonymizeIp']);
@@ -9,3 +10,25 @@ javascript:
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+  
+
+/ Please refer as well to the code presented by Piwik. The following examples features
+/ a setDoNotTrack attribute to make respect the browser-side DO-NOT-TRACK setting
+
+/! Piwik
+/ javascript:
+  var _paq = _paq || [];
+  _paq.push(['setDomains', ["*.blog.whoever.cc","*.people.whoever.de"]]);
+  _paq.push(['setDoNotTrack', true]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://your.host.net/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
+    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+noscript
+  p: img src="https://your.host.net/piwik/piwik.php?idsite=1" style="border:0;" alt=""
+/! End Piwik Code
