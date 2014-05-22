@@ -1,3 +1,7 @@
+$site-url: "<%= site_url + settings.http_prefix %>";
+// fix path for glyphicon fonts which come along with bootstrap
+$icon-font-path: "<%= settings.http_prefix + settings.fonts_dir %>/bootstrap/";
+
 $brand-secondary:   #ebe8db;
 $brand-primary:     #4D7599; // blue
 $brand-primary:     #6F5739; // brown
@@ -5,6 +9,7 @@ $brand-primary:     #4A572E; // dark olive green (check link color)
 $brand-primary:     #4A831B; // gras green
 $brand-primary:     #2F766E; // green teal
 $brand-primary:     #115D78; // dark cyan
+$brand-primary:     #cb4d51; // redish
 $body-bg:           $brand-primary;
 
 // http://css-tricks.com/snippets/css/font-stacks/
@@ -12,15 +17,22 @@ $font-family-sans-serif: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace; // like Github Gist
 $font-github: "Helvetica Neue",Helvetica,arial,freesans,clean,sans-serif; // used for subline of highlighted code
 
-@import url(http://fonts.googleapis.com/css?family=Bitter:400);
-$headings-font-family: 'Bitter', $font-family-sans-serif;
+// @import "compass/css3"; 
+// @include font-face("Bitter Regular", font-files("bitter/bitter-regular-webfont.woff", "bitter/bitter-regular-webfont.ttf", "bitter/bitter-regular-webfont.svg"), "bitter/bitter-regular-webfont.eot");
+// @import url(http://fonts.googleapis.com/css?family=Bitter:400);
+
+@font-face {
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('bitter/bitter-regular-webfont.eot');
+  src: local('Bitter-Regular'), local('Bitter Regular'), url('<%= settings.http_prefix + settings.fonts_dir %>/bitter/bitter-regular-webfont.eot?#iefix') format('embedded-opentype'), url('<%= settings.http_prefix + settings.fonts_dir %>/bitter/bitter-regular-webfont.woff') format('woff'), url('<%= settings.http_prefix + settings.fonts_dir %>/bitter/bitter-regular-webfont.ttf') format('truetype'), url('<%= settings.http_prefix + settings.fonts_dir %>/bitter/bitter-regular-webfont.svg#webfont') format('svg');
+}
+
+$headings-font-family: "Bitter", $font-family-sans-serif;
 $headings-font-weight: 400;
 
 $border-radius-base: 0;
 $navbar-default-bg: #fff;
 $navbar-default-brand-color: #000;
 $thumbnail-bg: #fff;
-
-$site-url: "<%= site_url + settings.http_prefix %>";
-// fix path for glyphicon fonts which come along with bootstrap
-$icon-font-path: "<%= settings.http_prefix + settings.fonts_dir %>/bootstrap/";
