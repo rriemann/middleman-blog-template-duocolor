@@ -2,14 +2,14 @@ lang: en
 title: Middleman Template Duo Color
 subtitle: subtitle default
 description: my nice description
-keywords:
-  - keywords
-  - what ever
+keywords: first one, 2nd one
 author: Martin Mustermann
 email:  me@localhost.local
 twitter: middleman
+google: GoogleUsername
+facebook: FacebookUsername
 location: Germany, Berlin
 
 google_analytics_id: UA-00000000-0
   
-host: rriemann.github.io
+host: my.blog.io
