@@ -319,3 +319,16 @@ aside {
 #recent-tweets section div {
   // padding-right: 0;
 }
+
+// remove url after links in print view
+@media print {
+  #headline, .post-header, .thumbnail {
+    a[href]:after {
+      content: none;
+    }
+  }
+  a[href]:not(.btn):not(.footnote) {
+    // text-decoration: underline;
+    border-bottom: 1px gray dotted;
+  }
+}

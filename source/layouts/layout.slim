@@ -65,7 +65,7 @@ html.no-js lang=(I18n.locale)
           .hidden-xs#headline: h1
             a> href="#{site_url}/" = I18n.t :title, default: data.site.title
             small == I18n.t :subtitle, default: data.site.subtitle
-          nav.navbar.navbar-default role="navigation"
+          nav.navbar.navbar-default.hidden-print role="navigation"
             .navbar-header
               button.navbar-toggle data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"
                 span.sr-only Toggle navigation
