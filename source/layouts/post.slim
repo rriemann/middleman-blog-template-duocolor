@@ -24,7 +24,8 @@
       - else
         li.next.disabled
           span #{I18n.t :next} &rarr;
-    hr
-    #disqus_thread
-    == partial :disqus
+    - unless current_page.data.comments == false
+      hr
+      #disqus_thread
+      == partial :disqus
  
