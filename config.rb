@@ -1,3 +1,4 @@
+activate :dotenv
 
 require 'rgbapng'
 
@@ -54,7 +55,7 @@ activate :i18n, :mount_at_root => :en
 ###
 
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
 # activate :livereload
@@ -86,6 +87,9 @@ set :images_dir,   'images'
 set :build_dir,    'build'
 set :partials_dir, 'partials'
 set :fonts_dir,    'fonts'
+
+ignore /.*\.kate-swp/
+ignore /.*\.new/
 
 # Livereload
 # use: https://github.com/middleman/middleman-livereload
@@ -122,12 +126,23 @@ configure :build do
   
   # Make favicons
   # use: https://github.com/follmann/middleman-favicon-maker
-  activate :favicon_maker
+  activate :favicon_maker, :icons => {
+    "favicon_base.png" =>   [
+      { icon: "apple-touch-icon-114x114-precomposed.png" },
+      { icon: "apple-touch-icon-72x72-precomposed.png" },
+      { icon: "apple-touch-icon-57x57-precomposed.png" },
+      { icon: "apple-touch-icon-precomposed.png", size: "57x57" },
+      { icon: "apple-touch-icon.png", size: "57x57" },
+      { icon: "favicon.png", size: "16x16" },
+      { icon: "favicon.ico", size: "16x16" },
+    ]
+  }
 
   # Minify
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/file-size-optimization.html.markdown#compressing-images
   activate :minify_css
   activate :minify_javascript
+  activate :minify_html
 
   # Enable cache buster
   # see: https://github.com/middleman/middleman-guides/blob/master/source/advanced/improving-cacheability.html.markdown#cache-buster-in-query-string
@@ -148,3 +163,11 @@ activate :deploy do |deploy|
   # deploy.branch   = "custom-branch" # default: gh-pages
   # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
 end
+
+## custom
+
+# Dir[File.dirname(__FILE__) + '/lib/tags/*.rb'].each {|file| require file }
+# require 'lib/tags/image_tag'
+# require "lib/custom_helpers"
+# helpers CustomHelpers
+

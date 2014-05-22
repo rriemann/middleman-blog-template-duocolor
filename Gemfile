@@ -1,8 +1,8 @@
-# ruby '2.0.0'
+ruby '2.0.0'
 
 # If you have OpenSSL installed, we recommend updating
 # the following line to use 'https'
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 
 gem 'middleman', '~> 3.2.2'
 
@@ -12,8 +12,9 @@ gem 'middleman-livereload', '~> 3.1.0'
 gem 'middleman-syntax', '~> 1.2.1'
 gem 'middleman-minify-html'
 gem 'middleman-imageoptim'
-gem 'middleman-favicon-maker'
+gem 'middleman-favicon-maker',  '~> 3.5'
 gem 'middleman-deploy'
+gem 'middleman-dotenv'
 
 gem 'middleman-blog', '~> 3.5.1'
 gem 'tzinfo' # timezones
