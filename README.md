@@ -14,8 +14,8 @@ which makes it easy to modify.
 
 This template incorporates a lot of features:
 
-* LaTeX formulas using [MathJax](http://mathjax.org), see [demo](/demo/)
-* syntax highlighting using pygmentize-compatible [Rouge](http://www.rubydoc.info/gems/rouge/) which looks exactly like embedded gists, see [demo](/demo/)
+* LaTeX formulas using [MathJax](http://mathjax.org), see [demo](demo/)
+* syntax highlighting using pygmentize-compatible [Rouge](http://www.rubydoc.info/gems/rouge/) which looks exactly like embedded gists, see [demo](demo/)
 * Middleman uses the kramdown markdown parser by default, which makes it very to use table of contents (TOC), see [original post](http://blog.riemann.cc/2013/04/10/table-of-contents-in-octopress/)
 * [Bower](http://bower.io/) is used to ease the updating of javascript libs (modernizer, jquery)
 * this templates comes not only with a `robots.txt`, but also with a `humans.txt`
@@ -23,7 +23,7 @@ This template incorporates a lot of features:
 * blog search provided by [DuckDuckGo](https://duckduckgo.com)
 * you do not only get one feed for your blog posts, but also feeds separted by tags (middleman proxies to the win)
 * all css files and javascript files are jointly minified to save bandwith and elements to loads
-* nice icon fonts [Fontello](http://fontello.com/) (see [demo](/demo/) and [Glyphicons](http://glyphicons.com/) at your disposal
+* nice icon fonts [Fontello](http://fontello.com/) (see [demo](demo/) and [Glyphicons](http://glyphicons.com/) at your disposal
 * disqus recent comments for your blog as aside
 * disqus number of comments per post on your blog post overview page
 
