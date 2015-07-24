@@ -1,0 +1,15 @@
+# humanstxt.org/
+
+/* AUTHORS */
+        Author:  Martin Mustermann
+        Contact: me@localhost.local
+        Twitter: @middleman
+        Google:  +GoogleUsername <https://plus.google.com/+GoogleUsername?rel=author>
+        Facebook: FacebookUsername
+        From:    Germany, Berlin
+
+/* SITE */
+        Last update: 2015-07-24
+        Language: English / Deutsch / Français
+        Doctype: HTML5
+        Tools: Kate, Middleman, Twitter Bootstrap

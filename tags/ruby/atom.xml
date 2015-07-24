@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Middleman Template Duo Color – ruby</title>
+  <subtitle>posts tagged with ruby</subtitle>
+  <id>http://my.blog.io/</id>
+  <link href="http://my.blog.io/"/>
+  <link href="http://my.blog.io/tags/ruby/atom.xml" rel="self"/>
+  <updated>2009-07-19T22:00:00Z</updated>
+  <author>
+    <name>Martin Mustermann</name>
+    <email>me@localhost.local</email>
+  </author>
+  <entry>
+    <title>Some Ruby Code</title>
+    <link rel="alternate" href="http://my.blog.io/middleman-blog-template-duocolor/2009/07/20/template_kmainwindow/"/>
+    <id>http://my.blog.io/middleman-blog-template-duocolor/2009/07/20/template_kmainwindow/</id>
+    <updated>2009-07-19T22:00:00Z</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p class="clearfix"&gt;In the following code listing you can find the code for a full-featured kmainwindow.&lt;/p&gt;
+
+&lt;pre class="highlight ruby"&gt;&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class="gutter gl"&gt;&lt;div class="lineno"&gt;1&lt;/div&gt;&lt;div class="lineno"&gt;2&lt;/div&gt;&lt;div class="lineno"&gt;3&lt;/div&gt;&lt;div class="lineno"&gt;4&lt;/div&gt;&lt;div class="lineno"&gt;5&lt;/div&gt;&lt;div class="lineno"&gt;6&lt;/div&gt;&lt;div class="lineno"&gt;7&lt;/div&gt;&lt;div class="lineno"&gt;8&lt;/div&gt;&lt;div class="lineno"&gt;9&lt;/div&gt;&lt;div class="lineno"&gt;10&lt;/div&gt;&lt;div class="lineno"&gt;11&lt;/div&gt;&lt;div class="lineno"&gt;12&lt;/div&gt;&lt;div class="lineno"&gt;13&lt;/div&gt;&lt;div class="lineno"&gt;14&lt;/div&gt;&lt;div class="lineno"&gt;15&lt;/div&gt;&lt;div class="lineno"&gt;16&lt;/div&gt;&lt;div class="lineno"&gt;17&lt;/div&gt;&lt;div class="lineno"&gt;18&lt;/div&gt;&lt;div class="lineno"&gt;19&lt;/div&gt;&lt;div class="lineno"&gt;20&lt;/div&gt;&lt;div class="lineno"&gt;21&lt;/div&gt;&lt;div class="lineno"&gt;22&lt;/div&gt;&lt;div class="lineno"&gt;23&lt;/div&gt;&lt;div class="lineno"&gt;24&lt;/div&gt;&lt;div class="lineno"&gt;25&lt;/div&gt;&lt;div class="lineno"&gt;26&lt;/div&gt;&lt;div class="lineno"&gt;27&lt;/div&gt;&lt;div class="lineno"&gt;28&lt;/div&gt;&lt;div class="lineno"&gt;29&lt;/div&gt;&lt;div class="lineno"&gt;30&lt;/div&gt;&lt;div class="lineno"&gt;31&lt;/div&gt;&lt;div class="lineno"&gt;32&lt;/div&gt;&lt;div class="lineno"&gt;33&lt;/div&gt;&lt;div class="lineno"&gt;34&lt;/div&gt;&lt;div class="lineno"&gt;35&lt;/div&gt;&lt;div class="lineno"&gt;36&lt;/div&gt;&lt;div class="lineno"&gt;37&lt;/div&gt;&lt;div class="lineno"&gt;38&lt;/div&gt;&lt;div class="lineno"&gt;39&lt;/div&gt;&lt;div class="lineno"&gt;40&lt;/div&gt;&lt;div class="lineno"&gt;41&lt;/div&gt;&lt;div class="lineno"&gt;42&lt;/div&gt;&lt;div class="lineno"&gt;43&lt;/div&gt;&lt;div class="lineno"&gt;44&lt;/div&gt;&lt;div class="lineno"&gt;45&lt;/div&gt;&lt;div class="lineno"&gt;46&lt;/div&gt;&lt;div class="lineno"&gt;47&lt;/div&gt;&lt;div class="lineno"&gt;48&lt;/div&gt;&lt;div class="lineno"&gt;49&lt;/div&gt;&lt;div class="lineno"&gt;50&lt;/div&gt;&lt;div class="lineno"&gt;51&lt;/div&gt;&lt;div class="lineno"&gt;52&lt;/div&gt;&lt;div class="lineno"&gt;53&lt;/div&gt;&lt;div class="lineno"&gt;54&lt;/div&gt;&lt;div class="lineno"&gt;55&lt;/div&gt;&lt;div class="lineno"&gt;56&lt;/div&gt;&lt;div class="lineno"&gt;57&lt;/div&gt;&lt;div class="lineno"&gt;58&lt;/div&gt;&lt;div class="lineno"&gt;59&lt;/div&gt;&lt;div class="lineno"&gt;60&lt;/div&gt;&lt;div class="lineno"&gt;61&lt;/div&gt;&lt;div class="lineno"&gt;62&lt;/div&gt;&lt;div class="lineno"&gt;63&lt;/div&gt;&lt;div class="lineno"&gt;64&lt;/div&gt;&lt;div class="lineno"&gt;65&lt;/div&gt;&lt;div class="lineno"&gt;66&lt;/div&gt;&lt;div class="lineno"&gt;67&lt;/div&gt;&lt;div class="lineno"&gt;68&lt;/div&gt;&lt;div class="lineno"&gt;69&lt;/div&gt;&lt;div class="lineno"&gt;70&lt;/div&gt;&lt;div class="lineno"&gt;71&lt;/div&gt;&lt;div class="lineno"&gt;72&lt;/div&gt;&lt;div class="lineno"&gt;73&lt;/div&gt;&lt;div class="lineno"&gt;74&lt;/div&gt;&lt;div class="lineno"&gt;75&lt;/div&gt;&lt;div class="lineno"&gt;76&lt;/div&gt;&lt;div class="lineno"&gt;77&lt;/div&gt;&lt;div class="lineno"&gt;78&lt;/div&gt;&lt;/td&gt;&lt;td class="code"&gt;&lt;span class="c1"&gt;#!/usr/bin/env ruby&lt;/span&gt;
+&lt;span class="c1"&gt;# file: kmainwindow.rb&lt;/span&gt;
+&lt;span class="vg"&gt;$KCODE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;u&amp;#39;&lt;/span&gt;
+
+&lt;span class="nb"&gt;require&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;korundum4&amp;#39;&lt;/span&gt; &lt;span class="c1"&gt;# kd4 bindings&lt;/span&gt;
+
+&lt;span class="k"&gt;class &lt;/span&gt;&lt;span class="nc"&gt;CustomWidget&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&lt;/span&gt; &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;MainWindow&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;initialize&lt;/span&gt;
+
+    &lt;span class="k"&gt;super&lt;/span&gt;
+
+    &lt;span class="n"&gt;resize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;520&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;535&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Prepare the Actions&lt;/span&gt;
+    &lt;span class="vi"&gt;@actionQuit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Action&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="nb"&gt;self&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="n"&gt;setIcon&lt;/span&gt; &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Icon&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;application-exit&amp;quot;&lt;/span&gt;
+    &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="n"&gt;connect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="vi"&gt;@actionQuit&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="no"&gt;SIGNAL&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="ss"&gt;:triggered&lt;/span&gt; &lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="no"&gt;SLOT&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="ss"&gt;:close&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Prepare the Menu&lt;/span&gt;
+    &lt;span class="vi"&gt;@menuBar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;menuBar&lt;/span&gt;
+    &lt;span class="vi"&gt;@menuFile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;Qt&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Menu&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt; &lt;span class="vi"&gt;@menuBar&lt;/span&gt;
+    &lt;span class="vi"&gt;@menuFile&lt;/span&gt;&lt;span class="nf"&gt;.addAction&lt;/span&gt; &lt;span class="vi"&gt;@actionQuit&lt;/span&gt;
+    &lt;span class="vi"&gt;@menuBar&lt;/span&gt;&lt;span class="nf"&gt;.addAction&lt;/span&gt; &lt;span class="vi"&gt;@menuFile&lt;/span&gt;&lt;span class="nf"&gt;.menuAction&lt;/span&gt;
+    &lt;span class="vi"&gt;@helpMenu&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;helpMenu&lt;/span&gt;
+    &lt;span class="vi"&gt;@menuBar&lt;/span&gt;&lt;span class="nf"&gt;.addAction&lt;/span&gt; &lt;span class="vi"&gt;@helpMenu&lt;/span&gt;&lt;span class="nf"&gt;.menuAction&lt;/span&gt;
+
+    &lt;span class="n"&gt;setMenuBar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="vi"&gt;@menuBar&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Prepare Statusbar&lt;/span&gt;
+    &lt;span class="vi"&gt;@statusBar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;statusBar&lt;/span&gt;
+    &lt;span class="n"&gt;setStatusBar&lt;/span&gt; &lt;span class="vi"&gt;@statusBar&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# Prepare Toolbar&lt;/span&gt;
+    &lt;span class="vi"&gt;@toolBar&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;toolBar&lt;/span&gt;
+    &lt;span class="vi"&gt;@toolBar&lt;/span&gt;&lt;span class="nf"&gt;.addAction&lt;/span&gt; &lt;span class="vi"&gt;@actionQuit&lt;/span&gt;
+    &lt;span class="n"&gt;addToolBar&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;Qt&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;TopToolBarArea&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="vi"&gt;@toolBar&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+
+    &lt;span class="c1"&gt;# Prepare Central Widget&lt;/span&gt;
+    &lt;span class="vi"&gt;@centralwidget&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;TextEdit&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt; &lt;span class="nb"&gt;self&lt;/span&gt;
+    &lt;span class="n"&gt;setCentralWidget&lt;/span&gt; &lt;span class="vi"&gt;@centralwidget&lt;/span&gt;
+
+    &lt;span class="n"&gt;retranslateUi&lt;/span&gt;
+  &lt;span class="k"&gt;end&lt;/span&gt;
+
+  &lt;span class="k"&gt;def &lt;/span&gt;&lt;span class="nf"&gt;retranslateUi&lt;/span&gt;
+    &lt;span class="vi"&gt;@menuFile&lt;/span&gt;&lt;span class="nf"&gt;.title&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i18n&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;File&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;setWindowTitle&lt;/span&gt; &lt;span class="n"&gt;i18n&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;MainWindow&amp;quot;&lt;/span&gt;
+    &lt;span class="c1"&gt;# @statusBar.showMessage i18n &amp;quot;Loading&amp;quot;&lt;/span&gt;
+    &lt;span class="vi"&gt;@actionQuit&lt;/span&gt;&lt;span class="nf"&gt;.text&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i18n&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Quit&amp;quot;&lt;/span&gt;
+    &lt;span class="vi"&gt;@actionQuit&lt;/span&gt;&lt;span class="nf"&gt;.shortcut&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;  &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Shortcut&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt; &lt;span class="n"&gt;i18nc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Quit&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Ctrl+Q&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="k"&gt;end&lt;/span&gt;
+
+&lt;span class="n"&gt;about&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;AboutData&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;app&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;                           &lt;span class="c1"&gt;# internal application name&lt;/span&gt;
+  &lt;span class="c1"&gt;# language catlog name for i10n (konqueror&amp;#39;s catalog for the beginning is better than no catalog)&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;konqueror&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+  &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="nf"&gt;.ki18n&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;KApp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;                 &lt;span class="c1"&gt;# application name in the about menu and everywhere else&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;0.1&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;                             &lt;span class="c1"&gt;# application version&lt;/span&gt;
+  &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;ki18n&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;A Tool to easily create HTML formatted Code&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;  &lt;span class="c1"&gt;# short description&lt;/span&gt;
+  &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;AboutData&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;License_GPL_V3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;    &lt;span class="c1"&gt;# license&lt;/span&gt;
+  &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;ki18n&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;(c) 1999-2000, Name&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="c1"&gt;# copyright info&lt;/span&gt;
+  &lt;span class="c1"&gt;# text in the about box - maybe with \n line breaks&lt;/span&gt;
+  &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;ki18n&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;just some text in the about box&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+  &lt;span class="c1"&gt;# project homepage and eMail adress for bug reports - attention: homepage changes standard dbus/dcop name!&lt;/span&gt;
+  &lt;span class="s2"&gt;&amp;quot;http://homepage.de&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;bugs@homepage.de&amp;quot;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="nf"&gt;.setProgramIconName&lt;/span&gt;  &lt;span class="s2"&gt;&amp;quot;plasma&amp;quot;&lt;/span&gt; &lt;span class="c1"&gt;# use the plasma-icon instead of question mark&lt;/span&gt;
+&lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;CmdLineArgs&lt;/span&gt;&lt;span class="nf"&gt;.init&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="no"&gt;ARGV&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;about&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;KDE&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="no"&gt;Application&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt;
+&lt;span class="n"&gt;w&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="no"&gt;CustomWidget&lt;/span&gt;&lt;span class="nf"&gt;.new&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="nf"&gt;.topWidget&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;w&lt;/span&gt;
+&lt;span class="n"&gt;w&lt;/span&gt;&lt;span class="nf"&gt;.show&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="nf"&gt;.exec&lt;/span&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/pre&gt;&lt;p class="code-meta"&gt;&lt;em&gt;kmainwindow.rb&lt;/em&gt;&lt;/p&gt;
+</content>
+  </entry>
+</feed>
