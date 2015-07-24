@@ -192,3 +192,6 @@ DEPENDENCIES
   slim (~> 2.0.2)
   tzinfo
   wdm (~> 0.1.0)
+
+BUNDLED WITH
+   1.10.3
